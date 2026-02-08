@@ -24,6 +24,21 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "34fca3e5-327d-45f3-89f6-5440d95bb787"
+      }
+    },
+    "owner": "floralunit",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/34fca3e5-327d-45f3-89f6-5440d95bb787"
     }
   }
 }
