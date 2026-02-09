@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.main,
-    padding: 20,
+    padding: 20
   },
 
   month: {
@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 6,
+    paddingVertical: 15,
     borderBottomWidth: 1,
     borderBottomColor: colors.mainLighter,
   },
@@ -52,8 +52,10 @@ export const styles = StyleSheet.create({
   day: {
     color: colors.secondary,
     fontSize: 18,
-    width: 30,
+    width: 35,
     textAlign: 'center',
+    fontSize: 22,
+    fontWeight: 'bold'
   },
 
   input: {
@@ -63,6 +65,7 @@ export const styles = StyleSheet.create({
     width: 80,
     marginHorizontal: 6,
     textAlign: 'center',
+    fontSize: 20
   },
 
   extra: {

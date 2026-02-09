@@ -8,12 +8,13 @@ import {
   TextInput,
   Modal,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { db } from '../db/database';
 import { styles } from '../styles/common';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function ItemsScreen({ route }) {
+export default function ItemsScreen({ route, navigation }) {
   const { category } = route.params;
+
   const [items, setItems] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [text, setText] = useState('');
@@ -94,9 +95,27 @@ export default function ItemsScreen({ route }) {
 
   return (
     <SafeAreaView style={styles.container}>
+
+      {/* ЗАКРЕПЛЁННАЯ ШАПКА КАК В XAMARIN */}
+      <View style={styles.listHeader}>
+        <Pressable onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.menuButton}>☰</Text>
+        </Pressable>
+
+        <Text style={styles.listTitle} numberOfLines={1}>
+          {category}
+        </Text>
+
+        {/* заглушка для центрирования */}
+        <View style={{ width: 32 }} />
+      </View>
+
+      {/* СПИСОК */}
       <FlatList
         data={items}
         keyExtractor={item => item.Id.toString()}
+        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 80 }}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <Pressable
             onPress={() => openEdit(item)}
@@ -147,6 +166,7 @@ export default function ItemsScreen({ route }) {
           </View>
         </View>
       </Modal>
+
     </SafeAreaView>
   );
 }

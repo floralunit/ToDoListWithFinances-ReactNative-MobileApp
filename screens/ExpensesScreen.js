@@ -23,6 +23,11 @@ export default function ExpensesScreen() {
   const year = now.getFullYear();
   const day = now.getDate();
 
+  useEffect(() => {
+    calculate();
+  }, [expenses, dayLimit]);
+
+
   function getDaysCount(m, y) {
     return new Date(y, m, 0).getDate();
   }
@@ -58,15 +63,20 @@ export default function ExpensesScreen() {
     calculate(data);
   }
 
-  function calculate(data) {
+  function calculate() {
+    if (!expenses.length || !dayLimit) return;
+
     let spent = 0;
-    data.forEach(e => spent += Number(e.SpentValue));
+    expenses.forEach(e => {
+      spent += Number(e.SpentValue || 0);
+    });
 
     const perfect = day * dayLimit;
     const diff = Math.round((perfect - spent) * 100) / 100;
 
     setCalcResult(diff > 0 ? `+ ${diff}` : `${diff}`);
   }
+
 
   async function onValueChange(item, value, field) {
     const database = await db;

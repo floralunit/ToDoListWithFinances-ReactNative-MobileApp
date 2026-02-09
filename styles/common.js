@@ -7,41 +7,34 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.main,
     padding: 20,
   },
-
-  menuItem: {
-    padding: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.mainLighter,
+  menuContainer: {
+    flex: 1,
+    paddingHorizontal: 24,
   },
 
-  menuText: {
-    color: colors.primary,
-    fontSize: 18,
+  headerSpace: {
+    height: 60,
   },
 
   item: {
     color: colors.primary,
-    fontSize: 18,
+    fontSize: 25,
     paddingVertical: 10,
   },
-  menuText: {
-  color: colors.primary,
-  fontSize: 18,
-  fontWeight: '600',
-},
 
-itemText: {
-  color: colors.primary,
-  fontSize: 18,
-  fontWeight: '500',
-},
+  itemText: {
+    color: colors.primary,
+    fontSize: 25,
+    fontWeight: '500',
+  },
 
-checkbox: {
-  fontSize: 22,
-  marginRight: 12,
-  color: colors.secondary,
-  fontWeight: '600',
-},
+  checkbox: {
+    fontSize: 35,
+    marginLeft: -5,
+    marginRight: 12,
+    color: colors.secondary,
+    fontWeight: '600',
+  },
 
 
   completed: {
@@ -55,68 +48,82 @@ checkbox: {
     height: 60,
     borderRadius: 30,
     position: 'absolute',
-    right: 20,
-    bottom: 20,
+    right: 40,
+    bottom: 50,
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   addButtonText: {
     fontSize: 32,
-    color: '#000',
   },
   itemRow: {
-  flexDirection: 'row',
-  alignItems: 'center',
-  paddingVertical: 12,
-},
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#3d434a',
+  },
 
-completedRow: {
-  opacity: 0.3,
-},
+  completedRow: {
+    opacity: 0.3,
+  },
+  listHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingTop: 6,
+    paddingBottom: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#3d434a',
+  },
 
-checkbox: {
-  fontSize: 22,
-  marginRight: 12,
-  color: '#f5cb5c',
-},
+  menuButton: {
+    fontSize: 30,
+    color: colors.secondary,
+    width: 32,
+  },
 
-itemText: {
-  color: '#e8eddf',
-  fontSize: 18,
-},
+  listTitle: {
+    flex: 1,
+    marginLeft: 20,
+    fontSize: 22,
+    fontWeight: '700',
+    color: '#e8eddf',
+  },
 
-modalBackdrop: {
-  flex: 1,
-  backgroundColor: 'rgba(0,0,0,0.6)',
-  justifyContent: 'center',
-  alignItems: 'center',
-},
 
-modal: {
-  backgroundColor: '#343a40',
-  padding: 20,
-  width: '80%',
-  borderRadius: 10,
-},
+  modalBackdrop: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 
-input: {
-  color: '#e8eddf',
-  fontSize: 20,
-  borderBottomWidth: 1,
-  borderBottomColor: '#6c757d',
-  marginBottom: 20,
-},
+  modal: {
+    backgroundColor: '#343a40',
+    padding: 20,
+    width: '80%',
+    borderRadius: 10,
+  },
 
-saveButton: {
-  backgroundColor: '#f5cb5c',
-  padding: 12,
-  borderRadius: 6,
-},
+  input: {
+    color: '#e8eddf',
+    fontSize: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#6c757d',
+    marginBottom: 20,
+  },
 
-saveButtonText: {
-  textAlign: 'center',
-  fontSize: 16,
-  color: '#000',
-}
+  saveButton: {
+    backgroundColor: '#f5cb5c',
+    padding: 12,
+    borderRadius: 6,
+  },
+
+  saveButtonText: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#000',
+  }
 });

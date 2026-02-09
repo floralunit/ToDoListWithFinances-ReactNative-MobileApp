@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "ToDoListWithFinances",
-    "slug": "ToDoListWithFinances",
+    "name": "floral.helper",
+    "slug": "floral.helper",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/my symbol.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/my symbol.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -23,7 +23,7 @@
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/my symbol.png"
     },
     "plugins": [
       "expo-sqlite"
